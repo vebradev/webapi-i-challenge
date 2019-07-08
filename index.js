@@ -1,11 +1,13 @@
 // implement your API here
 const express = require("express");
+const cors = require("cors");
 const server = express();
 const port = 3005;
 
 const Db = require("./data/db");
 
 server.use(express.json());
+server.use(cors());
 
 // GET
 server.get("/api/users/", (req, res) => {
